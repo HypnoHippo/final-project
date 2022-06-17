@@ -1,8 +1,9 @@
 <template>
   <div>
+    <NavBar></NavBar>
       <!-- Adding page title with bs classes for font style and margin -->
       <h1 class="display-4 text-center my-5">Music Facts</h1>
-  
+
       <!-- Creating accordion using v-for to create cards. -->
       <div class="accordion" role="tablist">
         <div :key="index" v-for="(card, index) in cards" role="tablist">
@@ -34,25 +35,34 @@
       <b-button v-on:click="show = !show" class="block w-100 border border-white mt-5" size="lg" variant="info">Toggle the bonus fact by clicking here!</b-button>
       <p v-if="show" class="mt-3">Ed Sheeran slept on Jamie Foxx's couch for six weeks before he made it big in the music business.</p>
       <p v-else class="mt-3">HIDDEN BONUS FACT</p>
-  </div>    
+    <AppFooter></AppFooter>
+  </div>
 </template>
 
 <script>
+import NavBar from '~/components/NavBar.vue'
+import AppFooter from '~/components/AppFooter.vue'
 export default {
-  name: 'MusicFacts',
-
-  data() {
+  name: "MusicFacts",
+  data () {
     return {
       // Creating v-if/else variable and accordion cards array
       show: false,
-      cards:[
-        {content: '<p>A 2007 study found that music, classical in particular, can help make plants grow faster.<br><br> <a href="https://www.medindia.net/news/study-proves-that-music-can-help-plants-to-grow-faster-25678-1.htm" target="_blank">Learn More</a></p>'},
-        {content: `The longest song title ever is Hoagy Carmichael’s 1943 “I'm a Cranky Old Yank in a Clanky Old Tank on the Streets of Yokohama with my Honolulu Mama Doin' Those Beat-o, Beat-o Flat-On-My-Seat-o, Hirohito Blues.”`},
-        {content: `In “Bohemian Rhapsody”, Freddie Mercury plays on the very same piano used by Paul McCartney in “Hey Jude”`},
-        {content: `The top selling singles of all time are Bing Crosby’s “White Christmas” (50 million), Elton John’s “Candle in the Wind ‘97” (33 million), Bill Crosby’s “Silent Night” (30 million), Mungo Jerry’s “In the summertime” (30 million) and Bill
-            Haley’s “Rock Around the Clock” (25 million)`},
+      cards: [
+        { content: "<p>A 2007 study found that music, classical in particular, can help make plants grow faster.<br><br> <a href=\"https://www.medindia.net/news/study-proves-that-music-can-help-plants-to-grow-faster-25678-1.htm\" target=\"_blank\">Learn More</a></p>" },
+        { content: `The longest song title ever is Hoagy Carmichael’s 1943 “I'm a Cranky Old Yank in a Clanky Old Tank on the Streets of Yokohama with my Honolulu Mama Doin' Those Beat-o, Beat-o Flat-On-My-Seat-o, Hirohito Blues.”` },
+        { content: `In “Bohemian Rhapsody”, Freddie Mercury plays on the very same piano used by Paul McCartney in “Hey Jude”` },
+        { content: `The top selling singles of all time are Bing Crosby’s “White Christmas” (50 million), Elton John’s “Candle in the Wind ‘97” (33 million), Bill Crosby’s “Silent Night” (30 million), Mungo Jerry’s “In the summertime” (30 million) and Bill Haley’s “Rock Around the Clock” (25 million)` }
       ]
-      }
     }
+  },
+  components: { NavBar, AppFooter }
 }
 </script>
+
+<style>
+  h1, p {
+    color: white;
+    text-align: center;
+  }
+</style>

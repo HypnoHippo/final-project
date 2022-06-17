@@ -1,5 +1,6 @@
 <template>
   <div class="px-0">
+    <NavBar></NavBar>
     <!-- Adding page title with bs classes for font style and margin -->
     <h1 class="display-4 text-center my-5">Free Music!</h1>
       <!-- Creating video grid in responsive container with padding -->
@@ -27,24 +28,27 @@
           </div>
         </div>
       </div>
+    <AppFooter></AppFooter>
   </div>
 </template>
 
 <script>
+import NavBar from '~/components/NavBar.vue'
+import AppFooter from '~/components/AppFooter.vue'
 export default {
-  name: 'VideosPage',
-
+  name: "VideosPage",
   data () {
     return {
       // Creating movies array with video sources
       movies: [
-        {link: "https://www.youtube-nocookie.com/embed/janrRk5PvyI"},
-        {link: "https://www.youtube-nocookie.com/embed/TB--z6lZf9E"},
-        {link: "https://www.youtube-nocookie.com/embed/GloyvUzU7g0"},
-        {link: "https://www.youtube-nocookie.com/embed/v0UQFyzU-ug"},
+        { link: "https://www.youtube-nocookie.com/embed/janrRk5PvyI" },
+        { link: "https://www.youtube-nocookie.com/embed/TB--z6lZf9E" },
+        { link: "https://www.youtube-nocookie.com/embed/GloyvUzU7g0" },
+        { link: "https://www.youtube-nocookie.com/embed/v0UQFyzU-ug" }
       ]
     }
-  }
+  },
+  components: { NavBar, AppFooter }
 }
 </script>
 
@@ -54,5 +58,5 @@ export default {
   #space-fix {
     margin-bottom: 1rem;
   }
-}  
+}
 </style>

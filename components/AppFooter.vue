@@ -6,14 +6,16 @@
 </template>
 
 <script>
-  export default {
-  name: 'AppFooter',
-  }
+export default {
+  name: 'AppFooter'
+}
 </script>
 
 <style>
   /* Giving footer a dark background */
   footer {
     background-color: #343a40;
+    text-align: center;
+    color: white;
   }
 </style>
