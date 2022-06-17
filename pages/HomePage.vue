@@ -3,21 +3,23 @@
   <div id="jumbotron-container">
     <b-jumbotron text-variant="white" class="p-4" id="jumbotron">
       <div class="container p-5">
-        <h1 class="display-4">Welcome to the Art, Facts, and Music Pages!</h1>
-        <p class="lead">If that didn't give it away, this is where you'll find some album art, random music facts, and some free music!</p>
+        <h1 class="display-4">Welcome to Liftoff Lyrics</h1>
+        <p class="lead">Your one stop for everything music!</p>
       </div>
     </b-jumbotron>
-    
+
+    <h4 class="mt-5">Here you can look up any song's lyrics, find free music, album art, and learn music facts!</h4>
+
     <!-- Adding continue button with bs classes for width, margin, and responsiveness -->
     <div class="container-fluid my-5">
-      <b-button to="/album-art" class="w-50 my-5" id="continue-button">Continue</b-button>
+      <b-button to="/AlbumArt" class="w-50 my-5" id="continue-button">Continue</b-button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'HomePage'
 }
 </script>
 
@@ -28,7 +30,8 @@ export default {
   }
 
   #jumbotron {
-    background-color: #1da4ba;
+    background-image: url('@/static/sandro-katalina.jpg');
+    background-size: cover;
   }
 
   #jumbotron-container {
