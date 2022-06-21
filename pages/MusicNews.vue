@@ -41,7 +41,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://newsapi.org/v2/everything?q=music&pageSize=10&apiKey=638de38889a74faf9148c19761885b51')
+      .get('https://newsapi.org/v2/everything?q=music&pageSize=18&apiKey=638de38889a74faf9148c19761885b51')
       .then(response => (this.stories = response.data.articles))
       .catch(error => {
         console.log(error)
@@ -53,11 +53,5 @@ export default {
 </script>
 
 <style>
-  /* #articles-container {
-    display: flex;
-  }
 
-  .card-deck {
-    justify-content: center;
-  } */
 </style>

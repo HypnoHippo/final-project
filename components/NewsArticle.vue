@@ -1,15 +1,20 @@
 <template>
   <div id="card-container">
     <b-card
-      :title="story.title"
       :img-src="story.urlToImage"
       img-alt="Article Image"
       img-top
       tag="article"
       style="max-width: 30rem;"
       class="mb-5"
+      img-width="480px"
     >
-      <b-card-text class="text-dark">
+      <template #header>
+        <h4>
+          {{ story . title }}
+        </h4>
+      </template>
+      <b-card-text class="text-dark mt-3">
         {{ story.description }}
       </b-card-text>
       <template #footer>
@@ -37,5 +42,6 @@ export default {
   #card-container {
     display: flex;
     flex: 1 1 auto;
+    justify-content: center;
   }
 </style>
