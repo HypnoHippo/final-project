@@ -3,7 +3,7 @@
     <b-nav justified class="nav">
         <!-- <NuxtLink>'s with child routes -->
         <NuxtLink to="/" exact exact-active-class="active" class="nav-item border-bottom border-right border-white">Home</NuxtLink>
-        <NuxtLink to="/LyricsPage" exact exact-active-class="active" class="nav-item border-left border-bottom border-white">Lyrics</NuxtLink>
+        <NuxtLink to="/MusicNews" exact exact-active-class="active" class="nav-item border-left border-bottom border-white">News</NuxtLink>
         <NuxtLink to="/AlbumArt" exact exact-active-class="active" class="nav-item border-left border-bottom border-white">Album Art</NuxtLink>
         <NuxtLink to="/MusicFacts" exact exact-active-class="active" class="nav-item border-bottom border-left border-white">Music Facts</NuxtLink>
         <NuxtLink to="/VideosPage" exact exact-active-class="active" class="nav-item border-left border-bottom border-white">Free Music</NuxtLink>

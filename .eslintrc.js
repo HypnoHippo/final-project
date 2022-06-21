@@ -16,6 +16,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "quotes": "off"
+    "quotes": "off",
+    "arrow-parens": "off",
+    "no-console": "off"
   }
 }

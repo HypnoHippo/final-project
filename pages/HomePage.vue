@@ -3,12 +3,12 @@
   <div id="jumbotron-container">
     <b-jumbotron text-variant="white" class="p-4" id="jumbotron">
       <div class="container p-5">
-        <h1 class="display-4">Welcome to Liftoff Lyrics</h1>
+        <h1 class="display-4">Welcome to Music Mania</h1>
         <p class="lead">Your one stop for everything music!</p>
       </div>
     </b-jumbotron>
 
-    <h4 class="mt-5">Here you can look up any song's lyrics, find free music, album art, and learn music facts!</h4>
+    <h4 class="mt-5">Here you can read up on music news, find free music, album art, and learn music facts!</h4>
 
     <!-- Adding continue button with bs classes for width, margin, and responsiveness -->
     <div class="container-fluid my-5">
