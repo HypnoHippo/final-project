@@ -40,6 +40,7 @@
           v-for="art in arts"
           :key="art.id"
           :art="art"
+          class="text-white"
         >
         Photo by <a :href="art.artist">{{art.creator}}</a> on <a :href="link">Unsplash</a>
         </li>
