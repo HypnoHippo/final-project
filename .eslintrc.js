@@ -15,5 +15,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "quotes": "off",
+    "arrow-parens": "off",
+    "no-console": "off"
+  }
 }
