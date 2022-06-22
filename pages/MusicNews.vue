@@ -5,9 +5,10 @@
       <h1 class="display-4 mb-5">
         Music News
       </h1>
+      <h5 class="text-white text-center mb-5">Click an article to mark it as read!</h5>
       <b-card-group v-if="stories" deck class="d-flex flex-row justify-content-around">
         <NewsArticle
-          v-for="story in computedObj"
+          v-for="story in stories"
           :key="story.id"
           :story="story"
         />
@@ -30,18 +31,12 @@ export default {
     return {
       loading: true,
       stories: null,
-      errored: false,
-      limit: 9
-    }
-  },
-  computed: {
-    computedObj () {
-      return this.limit ? this.stories.slice(0, this.limit) : this.stories
+      errored: false
     }
   },
   mounted () {
     axios
-      .get('https://newsapi.org/v2/everything?q=music&pageSize=18&apiKey=638de38889a74faf9148c19761885b51')
+      .get('https://newsapi.org/v2/everything?q=music&pageSize=9&apiKey=638de38889a74faf9148c19761885b51')
       .then(response => (this.stories = response.data.articles))
       .catch(error => {
         console.log(error)
@@ -53,5 +48,9 @@ export default {
 </script>
 
 <style>
-
+@media screen and (max-width: 575px) {
+  .card-deck {
+    display: block;
+  }
+}
 </style>
