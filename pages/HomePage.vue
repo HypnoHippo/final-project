@@ -3,7 +3,7 @@
   <div id="jumbotron-container">
     <b-jumbotron text-variant="white" class="p-4" id="jumbotron">
       <div class="container p-5">
-        <h1 class="display-4 font-weight-bold">Welcome to Music Splash</h1>
+        <h1 class="display-4 font-weight-bold">Welcome to {{ title }}</h1>
         <p class="lead text-monospace">Your one stop for everything music!</p>
       </div>
     </b-jumbotron>
@@ -19,7 +19,25 @@
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  data () {
+    return {
+      title: 'Music Splash'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'Music Splash',
+          name: 'Music Splash',
+          content: 'This is the landing page for Music Splash. Jump on in, the music is free!'
+        }
+      ]
+    }
+  }
 }
 </script>
 

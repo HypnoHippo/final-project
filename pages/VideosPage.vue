@@ -2,7 +2,7 @@
   <div class="px-0">
     <NavBar></NavBar>
     <!-- Adding page title with bs classes for font style and margin -->
-    <h1 class="display-4 text-center my-5">Free Music!</h1>
+    <h1 class="display-4 text-center my-5">{{ title }}!</h1>
       <!-- Creating video grid in responsive container with padding -->
       <div class="container-fluid p-4">
         <div class="row">
@@ -45,10 +45,23 @@ export default {
         { link: "https://www.youtube-nocookie.com/embed/TB--z6lZf9E" },
         { link: "https://www.youtube-nocookie.com/embed/GloyvUzU7g0" },
         { link: "https://www.youtube-nocookie.com/embed/v0UQFyzU-ug" }
-      ]
+      ],
+      title: 'Free Music'
     }
   },
-  components: { NavBar, AppFooter }
+  components: { NavBar, AppFooter },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'Free Music',
+          name: 'Free Music',
+          content: "Here are a handful of free to use songs that I've added from YouTube"
+        }
+      ]
+    }
+  }
 }
 </script>
 

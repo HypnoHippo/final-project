@@ -2,7 +2,7 @@
   <div>
     <nav-bar></nav-bar>
     <!-- Adding page title with bs classes for font style and margin -->
-    <h1 class="display-4 text-center my-5">Album Art</h1>
+    <h1 class="display-4 text-center my-5">{{ title }}</h1>
     <p class="text-center px-4">I can't actually display album art due to copyright so here are some free-use images instead</p>
 
     <!-- Creating a responsive container for the carousel with bs classes for margin and padding -->
@@ -42,7 +42,7 @@
           :art="art"
           class="text-white"
         >
-        Photo by <a :href="art.artist">{{art.creator}}</a> on <a :href="link">Unsplash</a>
+        Photo by <a :href="art.artist">{{ art.creator }}</a> on <a :href="link">Unsplash</a>
         </li>
       </ol>
     </div>
@@ -67,6 +67,19 @@ export default {
         { id: 1, artist: 'https://unsplash.com/@usgs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', creator: 'USGS', src: require('@/static/usgs.jpeg'), alt: 'Red/blue aerial landscape photo', title: 'Photo by USGS' },
         { id: 2, artist: 'https://unsplash.com/@peteriveyphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', creator: 'Peter Ivey-Hansen', src: require('@/static/peter-ivey-hansen.jpeg'), alt: 'Marble bust on a purple background', title: 'Photo by Peter Ivey-Hansen' },
         { id: 3, artist: 'https://unsplash.com/@justbia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', creator: 'Bia Andrade', src: require('@/static/bia-andrade.jpeg'), alt: 'White/blue abstract art', title: 'Photo by Bia Andrade' }
+      ],
+      title: 'Album Art'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'Album Art',
+          name: 'Album Art',
+          content: "Instead of album art this page features free to use images that can't get me into copyright trouble!"
+        }
       ]
     }
   }

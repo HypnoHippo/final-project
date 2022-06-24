@@ -3,7 +3,7 @@
     <NavBar />
     <div class="p-5">
       <h1 class="display-4 mb-5">
-        Music News
+        {{ title }}
       </h1>
       <h5 class="text-white text-center mb-5">Click an article to mark it as read!</h5>
       <b-card-group v-if="stories" deck class="d-flex flex-row justify-content-around">
@@ -31,7 +31,8 @@ export default {
     return {
       loading: true,
       stories: null,
-      errored: false
+      errored: false,
+      title: 'Music News'
     }
   },
   mounted () {
@@ -43,6 +44,18 @@ export default {
         this.errored = true
       })
       .finally(() => { this.loading = false })
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'Music News',
+          name: 'Music News',
+          content: "This page features the top news articles about music from around the web, all compiled right here!"
+        }
+      ]
+    }
   }
 }
 </script>

@@ -14,10 +14,24 @@ import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'IndexPage',
+  title: 'Index',
   components: {
     NavBar,
     AppFooter,
     HomePage
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'Index Page',
+          name: 'Index Page',
+          content: 'This is the landing page for Music Splash. Jump on in, the music is free!'
+        }
+      ]
+    }
   }
 }
 </script>

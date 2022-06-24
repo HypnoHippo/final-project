@@ -1,0 +1,11 @@
+## What I Learned:
+
+SEO is a huge topic with lots of different connected parts. Everything from your sites meta data, how you use links, what SEO tricks you're using, and even what Google felt like changing their algorithm to that quarter can affect how well your site ranks on searches. Their are entire companies built around just testing what gets the best SEO results. One of the articles on MOZ Whiteboard I read was written by somebody who works at one of those companies about the recent results they got on different SEO tests. I thought it was interesting what can affect your results and how. For example there is a method people use to try and "trick" the algorithm into representing their site better where they pack the pages with hidden text full of keywords. This actually lead to an overall worse SEO score!
+
+Another interesting result I read about covered links and their impact on SEO. In the test they had articles with 2 links at the bottom of each one. They doubled this to 4 on each article and tested the difference. It lead to a significant increase in traffic...to where the links lead! So adding the extra links did help, it just ended up helping the linked pages and not the pages that actually had those links on them. Overall, the biggest takeaway I've gotten from researching SEO is that it's constantly changing and evolving. Not just the algorithm that changes every few months but also the ever changing best practices needed for optimal SEO ranking. If you want your website to always have the best SEO results possible, you need to constantly update it to keep up.
+
+
+
+## Ideal SEO Implementation:
+
+Ideally I would be able to add share buttons that generate dynamically with each article on the Music News page. That way if you see an article you want to share or send on social media the button is right there and makes it super easy. Same with the pictures on the Album Art page and videos on the Free Music page. I want to update the fallback metadata in the nuxt.config file as well. I'd also want to update the h1 tags and meta data on my pages to be all connected like they are in the Nuxt documentation ( <h1>{{title}}</h1>, title: this.title, etc. )

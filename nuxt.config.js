@@ -7,7 +7,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'Music-Splash', name: 'Music-Splash', content: 'Your one stop for everything music! Find album art, music facts, news, and free music, all right here!' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
