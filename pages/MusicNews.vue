@@ -5,7 +5,13 @@
       <h1 class="display-4 mb-5">
         {{ title }}
       </h1>
-      <h5 class="text-white text-center mb-5">Click an article to mark it as read!</h5>
+      <h5 class="text-white text-center mb-5">
+        Click an article to mark it as read!
+      </h5>
+      <p>
+        ~This page utilizes the free version of NewsAPI and unfortunately does not work on a hosted site. If you'd like to see this page in
+        action please download the source code from GitHub and follow the directions in the readme to deploy the site locally~
+      </p>
       <b-card-group v-if="stories" deck class="d-flex flex-row justify-content-around">
         <NewsArticle
           v-for="story in stories"
@@ -35,16 +41,6 @@ export default {
       title: 'Music News'
     }
   },
-  mounted () {
-    axios
-      .get('https://newsapi.org/v2/everything?q=music&pageSize=9&apiKey=638de38889a74faf9148c19761885b51')
-      .then(response => (this.stories = response.data.articles))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => { this.loading = false })
-  },
   head () {
     return {
       title: this.title,
@@ -56,6 +52,16 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    axios
+      .get('https://newsapi.org/v2/everything?q=music&pageSize=9&apiKey=638de38889a74faf9148c19761885b51')
+      .then(response => (this.stories = response.data.articles))
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => { this.loading = false })
   }
 }
 </script>
